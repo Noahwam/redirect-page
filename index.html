@@ -2,21 +2,32 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>Xへ移動中...</title>
-  <script>
-    const isTikTok = navigator.userAgent.includes("TikTok");
-    if (isTikTok) {
-      // TikTok内だったらSafariに強制リダイレクト
-      window.location.href = "https://yourusername.github.io/redirect-page/";
-    } else {
-      // Safariで開かれたらXアプリを発火
-      window.location.href = "twitter://user?screen_name=noah_wam4";
+  <title>リンク選択ページ</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; padding-top: 100px; background: #f0f0f0; }
+    .button {
+      display: block;
+      width: 260px;
+      margin: 20px auto;
+      padding: 15px;
+      font-size: 18px;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
     }
-  </script>
+    .fanclub { background: #e91e63; }
+    .twitter { background: #1da1f2; }
+  </style>
 </head>
 <body>
-  移動中...<br>
-  開かない場合は <a href="twitter://user?screen_name=noah_wam4">こちら</a>
+  <h1>どちらに進みますか？</h1>
+
+  <!-- ✅ ファンクラブリンク（直接） -->
+  <a href="https://candfans.com/noah_wam4" class="button fanclub">ファンクラブを見る</a>
+
+  <!-- ✅ X用リダイレクトページへ -->
+  <a href="https://noahwam.github.io/redirect-page/x.html" class="button twitter">Xを見る</a>
+
+  <p style="margin-top:30px; font-size:13px; color:#666;">※XはSafariで開かれると自動でアプリに飛びます</p>
 </body>
 </html>
-
