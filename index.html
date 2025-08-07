@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Xへ移動中...</title>
+  <script>
+    const isTikTok = navigator.userAgent.includes("TikTok");
+    if (isTikTok) {
+      // TikTok内だったらSafariに強制リダイレクト
+      window.location.href = "https://yourusername.github.io/redirect-page/";
+    } else {
+      // Safariで開かれたらXアプリを発火
+      window.location.href = "twitter://user?screen_name=noah_wam4";
+    }
+  </script>
+</head>
+<body>
+  移動中...<br>
+  開かない場合は <a href="twitter://user?screen_name=noah_wam4">こちら</a>
+</body>
+</html>
+
